@@ -59,6 +59,8 @@
   .pend-ov{position:absolute;pointer-events:none;background:rgba(201,153,46,.30);box-shadow:0 0 0 1.5px #c9992e;border-radius:3px;z-index:3}
 
   .mk-wave{text-decoration:underline wavy;text-decoration-thickness:1.7px;text-underline-offset:5px}
+  .mk-long{text-decoration:underline wavy #e0372d;text-decoration-thickness:1.8px;text-underline-offset:5px;text-decoration-skip-ink:none}
+  .mk-hl.mk-long{} /* 底色+波浪可叠加（同一 span 两类并存） */
   .mk-underline{text-decoration:underline;text-decoration-thickness:1.7px;text-underline-offset:5px}
   .mk-double{text-decoration:underline double;text-decoration-thickness:3px;text-underline-offset:5px}
   .mk-strike{text-decoration:line-through;text-decoration-thickness:1.7px}
@@ -232,6 +234,7 @@ const SHAPES = [
   {key:'hl_pink',   ic:'●', lb:'粉·完全生词',     cls:'mk-highlight-span', color:'#FFB8EBA6'},
   {key:'hl_green',  ic:'●', lb:'绿·眼熟未必准',   cls:'mk-highlight-span', color:'#BBFABBA6'},
   {key:'hl_gray',   ic:'●', lb:'灰·借鉴意义不大', cls:'mk-highlight-span', color:'#CACFD9A6'},
+  {key:'ul_long',   ic:'〰', lb:'红波浪·长难句',   cls:'mk-long',           color:'#e0372d'},
 ];
 const PALETTES = {};
 const DEF_COLOR={hl_orange:'#FFB86CA6',hl_cyan:'#ABF7F7A6',hl_pink:'#FFB8EBA6',hl_green:'#BBFABBA6',hl_gray:'#CACFD9A6'};
@@ -338,9 +341,13 @@ function buildParaContent(pid, plain, marks){
     });
   }
   marks.forEach(mk=>{
-    const shape=mk.shape, cls=(SHAPES.find(x=>x.key===shape)||{}).cls;
-    // 精读版：只有纯色高亮
-    spans.filter(sp=>sp.s>=mk.start&&sp.e<=mk.end).forEach(sp=>{sp.el.classList.add('mk-hl');sp.el.style.background=mk.color;sp.el.dataset.mk=(sp.el.dataset.mk||'')+mk.id+',';});
+    const shape=mk.shape, sh=(SHAPES.find(x=>x.key===shape)||{});
+    // 精读版：纯色高亮；红波浪(ul_long)=装饰层，不铺底色、可与底色叠加
+    spans.filter(sp=>sp.s>=mk.start&&sp.e<=mk.end).forEach(sp=>{
+      if(shape==='ul_long'){ sp.el.classList.add('mk-long'); }
+      else { sp.el.classList.add('mk-hl'); sp.el.style.background=mk.color; }
+      sp.el.dataset.mk=(sp.el.dataset.mk||'')+mk.id+',';
+    });
   });
   /* 精读版无圆圈/方框 */
   return frag;
