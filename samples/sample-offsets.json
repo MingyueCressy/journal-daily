@@ -1,0 +1,123 @@
+{
+  "source": "2025-english1-essayA",
+  "note": "由 app-data.json 解析出的「纯文本 + 字符偏移标记」形态",
+  "paragraphs": [
+    {
+      "id": "p0",
+      "type": "salutation",
+      "plain": "Dear Paul,",
+      "marks": []
+    },
+    {
+      "id": "p1",
+      "type": "para",
+      "plain": "To enhance students' capabilities to craft-making and enrich their extracurricular life, the craft-making activities will be held on the playground at 4 p.m. this Friday. I'm glad you are interested in the craft demonstrate and willing to give a hand.",
+      "marks": [
+        {
+          "shape": "grammar",
+          "start": 21,
+          "end": 49,
+          "text": "capabilities to craft-making",
+          "note": "capability 后接 to do 或 of doing；craft-making 是动名词，应为 capabilities in craft-making。"
+        },
+        {
+          "shape": "grammar",
+          "start": 212,
+          "end": 223,
+          "text": "demonstrate",
+          "note": "词性错：demonstrate 是动词，此处需名词 → the craft demonstration 或 the crafts on display。"
+        },
+        {
+          "shape": "good",
+          "start": 239,
+          "end": 250,
+          "text": "give a hand",
+          "note": "地道，口语化恰当。"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "type": "para",
+      "plain": "The craftmen will show paper-cutting and bamboo weaving Of course, there are other activities on the playground. Let me keep a little secret for you.",
+      "marks": [
+        {
+          "shape": "error",
+          "start": 4,
+          "end": 12,
+          "text": "craftmen",
+          "note": "拼写错 → craftsmen。真题邮件里 Paul 用的就是 craftsmen，抄题干就能对！"
+        },
+        {
+          "shape": "good",
+          "start": 23,
+          "end": 55,
+          "text": "paper-cutting and bamboo weaving",
+          "note": "具体、加分，符合“介绍内容”要求。"
+        },
+        {
+          "shape": "note",
+          "start": 113,
+          "end": 148,
+          "text": "Let me keep a little secret for you",
+          "note": "俏皮，但风险高。考试应用文要信息完整、表达得体；“卖关子”显得不专业，且浪费词数（只有 100 词）。建议换成实质内容。"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "type": "para",
+      "plain": "You are willing to give a hand. We are so grateful. Can you help prepare seats and test audio equipment? We will gather the school hall at 2 p.m. this Friday.",
+      "marks": [
+        {
+          "shape": "note",
+          "start": 0,
+          "end": 51,
+          "text": "You are willing to give a hand. We are so grateful.",
+          "note": "逻辑略松 + 时态不当。这是对 Paul 的“陈述”，像在复述他的话（第 1 段已说过一次 willing to give a hand），与题干 Please let me know what I can do 的衔接不够直接。可直接给出任务，并补一句衔接。"
+        },
+        {
+          "shape": "template",
+          "start": 52,
+          "end": 104,
+          "text": "Can you help prepare seats and test audio equipment?",
+          "note": "📌 任务具体（摆座位 + 试音响），符合“请对方帮忙”要求。建议套《万能模板》8.6 书信语料 ^tmpl-letter-appreciate 的礼貌软化句式：Would you be able to assist with ___? / I would appreciate it if you could ___."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "type": "para",
+      "plain": "Looking forward to your reply.",
+      "marks": [
+        {
+          "shape": "template",
+          "start": 0,
+          "end": 30,
+          "text": "Looking forward to your reply.",
+          "note": "📌 标准结尾句式，全对。模板库 8.6 也推荐 I look forward to hearing from you."
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "type": "closing",
+      "plain": "Yours, sincerely",
+      "marks": [
+        {
+          "shape": "error",
+          "start": 0,
+          "end": 16,
+          "text": "Yours, sincerely",
+          "note": "标点错：书信格式应为 Yours sincerely,（中间无逗号，末尾逗号）。"
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "type": "closing",
+      "plain": "Li Ming",
+      "marks": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "tool": "writing-optimizer",
+  "version": 3,
+  "paper": "2025 考研英语（一）",
+  "savedAt": "2026-09-29T00:46:41.976Z",
+  "texts": {
+    "p0": "Dear Paul,",
+    "p1": "To enhance students' capabilities to craft-making and enrich their extracurricular life, the craft-making activities will be held on the playground at 4 p.m. this Friday. I'm glad you are interested in the craft demonstrate and willing to give a hand.",
+    "p2": "The craftmen will show paper-cutting and bamboo weaving Of course, there are other activities on the playground. Let me keep a little secret for you.",
+    "p3": "You are willing to give a hand. We are so grateful. Can you help prepare seats and test audio equipment? We will gather the school hall at 2 p.m. this Friday.",
+    "p4": "Looking forward to your reply.",
+    "p5": "Yours, sincerely",
+    "p6": "Li Ming"
+  },
+  "marks": {
+    "p1": [
+      {
+        "start": 11,
+        "end": 20,
+        "shape": "hl_orange",
+        "color": "#FFB86CA6",
+        "note": ""
+      },
+      {
+        "start": 37,
+        "end": 49,
+        "shape": "hl_cyan",
+        "color": "#ABF7F7A6",
+        "note": ""
+      },
+      {
+        "start": 61,
+        "end": 66,
+        "shape": "hl_green",
+        "color": "#BBFABBA6",
+        "note": ""
+      },
+      {
+        "start": 93,
+        "end": 105,
+        "shape": "hl_pink",
+        "color": "#FFB8EBA6",
+        "note": ""
+      },
+      {
+        "start": 122,
+        "end": 124,
+        "shape": "hl_gray",
+        "color": "#CACFD9A6",
+        "note": ""
+      }
+    ]
+  }
+}
